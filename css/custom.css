@@ -1,0 +1,7 @@
+#research img {
+  transition-duration: 0.3s;
+}
+
+#research img:hover {
+  box-shadow: 0px 0px 6px black;
+}
