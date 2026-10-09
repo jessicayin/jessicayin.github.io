@@ -54,7 +54,8 @@ table {
 }
 
 #main {
-  width: 54em;
+  width: calc(100% - 2em);
+  max-width: 54em;
   margin: 0px auto;
   position: relative;
   min-height: 100vh;
@@ -192,6 +193,16 @@ h2 {
   color: #a0a8b0;
 }
 
+.list-item.activity {
+  box-sizing: border-box;
+  padding-left: 3em;
+  line-height: 1.4em;
+}
+
+.list-item.activity p.date {
+  margin-left: -3em;
+}
+
 /**************************************************/
 /* Gallery of 3 preview videos. */
 
@@ -284,6 +295,12 @@ h3 a:hover {
   margin-bottom: 0.5em;
 }
 
+.publication::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .publication p {
   font-size: 1em;
   line-height: 1.5em;
@@ -293,6 +310,34 @@ h3 a:hover {
 .project-description {
   width: 80%;
   float: left;
+}
+
+@media (max-width: 56em) {
+  #intro {
+    flex-direction: column-reverse;
+    padding-top: 2em;
+    gap: 1em;
+  }
+
+  #intro-text {
+    width: 100%;
+    float: none;
+  }
+
+  #intro-image {
+    width: 10em;
+    height: 10em;
+    margin: 0;
+    float: none;
+  }
+
+  #intro-image img {
+    width: 100%;
+  }
+
+  h1 {
+    line-height: 1.2em;
+  }
 }
 
 /**************************************************/
